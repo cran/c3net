@@ -15,10 +15,12 @@
 ## igraph package itself.
 
 
-c3net <- function(dataset, alpha=0.01, methodstep1="cutoff", cutoffMI= 0, MTCmethod="BH", itnum=5, network=FALSE)
+c3net <- function(dataset, cop=TRUE, alpha=0.01, methodstep1="cutoff", cutoffMI= 0, MTCmethod="BH", itnum=5, network=FALSE)
 {
       net <- NULL
-      dataset <- copula(expdata)
+      if(cop==TRUE){
+      dataset <- copula(dataset)
+      }
       mim<-makemim(dataset)
       
       if( methodstep1=="cutoff" ) {

@@ -3,10 +3,12 @@
 \alias{c3net}
 
 \title{All in one function to infer network with C3NET}
-\usage{c3net(dataset, alpha=0.01, methodstep1="cutoff", cutoffMI= 0,
+\usage{c3net(dataset, cop=TRUE, alpha=0.01, methodstep1="cutoff", cutoffMI= 0,
 	      MTCmethod="BH", itnum=5, network=FALSE)}
 \arguments{
   \item{dataset}{Data set where rows are variables (e.g. genes) and columns are samples.}
+ 
+  \item{cop}{The data set is copula transformed by default. If not wanted, then "cop" is set to FALSE.}
 
   \item{alpha}{Statistical significance threshold}
 

@@ -15,7 +15,7 @@
 ## igraph package itself.
 
 
-c3 <- function(mim) # symetric MI matrix is input
+c3 <- function(mim, sym=TRUE) # symetric MI matrix is input
 {
 diag(mim) <- 0
 c3mim <- mim
@@ -23,6 +23,7 @@ c3mim[,] <- 0
 
 numgene <- ncol(mim)
 
+if(sym==TRUE){
 for(i in 1:numgene)
 {
 if(sum(mim[i,]) != 0)
@@ -33,6 +34,20 @@ c3mim[i,ind] <- mim[i,ind]
 c3mim[ind,i] <- mim[i,ind] 
 }
 } 
+}
+
+if(sym!=TRUE){
+for(i in 1:numgene)
+{
+if(sum(mim[i,]) != 0)
+{
+ind <- which(mim[i,]==max(mim[i,]))[1]
+
+c3mim[i,ind] <- mim[i,ind] 
+ 
+}
+} 
+}
 
 c3mim
 }
