@@ -1,0 +1,39 @@
+##EXAMPLE FOR ALL THE FUNCTIONS OF C3NET
+#fetching the example expression data set
+data(expdata)
+
+#fetching the example true network of the data set
+data(truenet)
+
+#copula transforming the data set
+expdata <- copula(expdata)
+
+#set a significance threshold value
+alpha <- 0.001
+
+#set an iteration number for statistical analysis in sigtestMTC
+itnum <-2
+
+# eliminate nonsignificant MI valued edges by BH method. Another MTC method can be changed if desired.
+res <- sigtestMTC( expdata, alpha, itnum, methodsig="BH")
+
+#The Step 2 of C3NET algorithm is applied. 
+net <- c3(res$Inew) # regulatory network inferred (non zero elements stand for links of the predicted network)
+
+# the predicted network validation
+scores <- checknet(net,truenet)
+
+
+# plotting the predicted network
+netplot(net)
+
+
+##EXAMPLE FOR THE COMBINED SINGLE FUNCTIONS OF C3NET
+
+#THIS EXAMPLE GIVES EXACTLY THE SAME RESULT AS ABOVE
+
+data(expdata)
+data(truenet)
+net <- c3net(expdata, network=TRUE)  #COMBINED FUNCTION
+scores <- checknet(net,truenet)
+
