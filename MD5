@@ -1,5 +1,5 @@
-b64ec4643972a3ee6418e416037f4bc5 *DESCRIPTION
-75e1ff61ee8d08f680a2ac78cb27fdc9 *NAMESPACE
+db1ee2bb9292c8eedc465a36051f63e0 *DESCRIPTION
+4a89e0befc5c375b2e143af618c5c7d1 *NAMESPACE
 eab71401f093d1de1eba8d9715aa79cf *R/c3.R
 d07bcc4d28f0dbe459bff6720ab9781b *R/c3net.R
 201dc253447c8d86b93307c962456de8 *R/checknet.R
@@ -9,8 +9,8 @@ f97664872081f449daecd3209ad2715e *R/copula.R
 a24649260689f5cbc2bf68010c8e5317 *R/sigtestMTC.R
 fd788d162da64eb270fc816380a8e1aa *R/sigtestp.R
 a1aa352b346fa5a9b33f990e4c8d1a9d *README
-2ce5b6dfc9bb036d3457119b6e7ea97e *data/expdata.rda
-b15caf7cce5b268d86e326f73feec4fe *data/truenet.rda
+49ee0f96d4261aa9caa54b1763206c45 *data/expdata.rda
+4de6dc9f9989fc72cec6ebcc5442c379 *data/truenet.rda
 ebea2e50467950a8cd8630172c21dc48 *inst/CITATION
 e544a844e4e9179a561eaf552ba7cc8d *inst/doc/EXAMPLE.txt
 52b42112ea461323fbbb59b6b1b55284 *inst/doc/README.txt
